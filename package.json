@@ -1,0 +1,30 @@
+{
+  "name": "tiny-lr-cli",
+  "version": "0.0.1",
+  "description": "CLI part of tiny-lr",
+  "bin": {
+    "tiny-lr": "bin/tiny-lr"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mklabs/tiny-lr-cli.git"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.4.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-register": "^6.11.6",
+    "babelify": "^7.3.0",
+    "cssnano": "^3.7.3",
+    "debug": "~2.2.0",
+    "gaze": "^1.1.1",
+    "glob": "^7.0.5",
+    "minimist": "^1.2.0",
+    "precss": "^1.4.0",
+    "roar-cli": "^0.2.1",
+    "socket.io": "^1.4.8",
+    "tilt-assets": "github:mklabs/tilt-assets"
+  },
+  "license": "MIT"
+}
