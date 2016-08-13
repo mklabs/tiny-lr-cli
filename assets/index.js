@@ -14,7 +14,7 @@ fetch('/clients')
     json.clients.forEach(createClient);
 
     // Handle socketio events
-    let socket = io('http://localhost:3000');
+    let socket = io('http://localhost:' + document.body.getAttribute('data-port'));
     socket.on('tinylr:destroy', function (data) {
       let view = views[data.id];
       if (!view) return;
