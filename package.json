@@ -24,7 +24,8 @@
     "precss": "^1.4.0",
     "roar-cli": "^0.2.1",
     "socket.io": "^1.4.8",
-    "tilt-assets": "github:mklabs/tilt-assets"
+    "tilt-assets": "github:mklabs/tilt-assets",
+    "tiny-lr": "github:mklabs/tiny-lr#dev"
   },
   "license": "MIT",
   "browserify": {
