@@ -1,6 +1,6 @@
 {
   "name": "tiny-lr-cli",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "CLI part of tiny-lr",
   "bin": {
     "tiny-lr": "bin/tiny-lr"
