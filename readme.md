@@ -8,6 +8,10 @@ CLI part and dashboard of tiny-lr
   [serve-index](https://github.com/expressjs/serve-index) and
   [serve-static](https://github.com/expressjs/serve-index)
 
+## Install
+
+    npm install mklabs/tiny-lr-cli -g
+
 ---
 
 ![Dashboard](https://cloud.githubusercontent.com/assets/113832/17619801/0ffb6d0c-6088-11e6-9b55-1126a0b45a5d.PNG)
