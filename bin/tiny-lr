@@ -5,6 +5,7 @@ process.env.DEBUG = process.env.DEBUG || 'tinylr*';
 const debug = require('debug')('tinylr:cli');
 const fs    = require('fs');
 const glob  = require('glob');
+const path  = require('path');
 
 // Have babel-register loaded after debug, otherwise cause issues with debug
 require('babel-register')();
@@ -17,6 +18,19 @@ if (cli.options.help || cli.options.version) process.exit(0);
 let files = glob.sync(cli.options.wg || '**/*.{js,css}', {
   ignore: 'node_modules/**'
 });
+
+// From these, build list of directories and append them to the list of files to watch in order to get added files
+let dirs = files
+  .map((file) => {
+    return path.dirname(file);
+  })
+  .reduce((res, dir) => {
+    res[dir] = dir;
+    return res;
+  }, {});
+
+dirs = Object.keys(dirs).map(dir => path.join(dir, '*'));
+files = dirs.concat(files);
 
 cli.listen(() => {
   debug('Listening on %d (env: %s)', cli.options.port, process.env.DEBUG);
